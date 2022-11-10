@@ -27,7 +27,7 @@ const appendValues = (arrayValues) => {
 
 const toggleDrowdownButton = async (event) => {
     const dropdownList = document.getElementById("branches");
-    console.log(dropdownList.classList);
+    // console.log(dropdownList.classList);
     if (dropdownList.classList.contains("showing")) {
         dropdownList.classList.remove("showing")
     } else {
@@ -67,7 +67,6 @@ const createDropdownElement = (placeholder, options) => {
     selectComponent.classList.add("form-select", "unshowing");
     selectComponent.id = "branches";
     selectComponent.addEventListener("change", consoleValue);
-    selectComponent.addEventListener("blur", toggleDrowdownButton);
     selectComponent.setAttribute("multiple", true);
     
     // adding above created input field type component in the box
