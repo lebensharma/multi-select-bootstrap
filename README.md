@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-This is a simple bootstrapped multiselect.
-=======
+
 This is a simple bootstrapped multiselect.
 
 To add in HTML file where you want to place the dropdown multi select.
@@ -14,4 +12,3 @@ window.addEventListener('DOMContentLoaded', () => {
     const jsonFilePath = "static.json";
     DropdownMultiSelect(placeholder, jsonFilePath);
 });
->>>>>>> 11596f9a3c030724da62e56017fb41d73455cd6a
