@@ -1,3 +1,1 @@
-# Get Started!
-
-Add files and start typing 🎉
+This is a simple bootstrapped multiselect.
