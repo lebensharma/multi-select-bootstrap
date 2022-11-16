@@ -66,7 +66,7 @@ const createDropdownElement = (placeholder, options, idOrNameToBeSuppliedToInput
     const selectComponent = document.createElement("select");
     selectComponent.classList.add("form-select", "unshowing");
     selectComponent.id = idOrNameToBeSuppliedToInput;
-    selectComponent.name = idOrNameToBeSuppliedToInput;
+    selectComponent.name = `${idOrNameToBeSuppliedToInput}[]`;
     selectComponent.addEventListener("change", consoleValue);
     selectComponent.setAttribute("multiple", true);
     
