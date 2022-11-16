@@ -48,7 +48,7 @@ const mapOptions = async (options) => {
     })
 }
 
-const createDropdownElement = (placeholder, options) => {
+const createDropdownElement = (placeholder, options, idOrNameToBeSuppliedToInput) => {
     const parentComponent = document.getElementById("multi_select_component_body");
 
     // creating element and adding class & id and adding eventListener
@@ -65,7 +65,8 @@ const createDropdownElement = (placeholder, options) => {
     
     const selectComponent = document.createElement("select");
     selectComponent.classList.add("form-select", "unshowing");
-    selectComponent.id = "branches";
+    selectComponent.id = idOrNameToBeSuppliedToInput;
+    selectComponent.name = idOrNameToBeSuppliedToInput;
     selectComponent.addEventListener("change", consoleValue);
     selectComponent.setAttribute("multiple", true);
     
@@ -76,13 +77,13 @@ const createDropdownElement = (placeholder, options) => {
     }
 }
 
-const DropdownMultiSelect = (placeholder, jsonFilePath) => {
+const DropdownMultiSelect = (placeholder, jsonFilePath, idOrNameToBeSuppliedToInput) => {
     fetch(jsonFilePath)
         .then(json_options => {
             json_options.json()
             .then(options => {
                 console.log(options);
-                createDropdownElement(placeholder, options);
+                createDropdownElement(placeholder, options, idOrNameToBeSuppliedToInput);
             })
         });
 }
