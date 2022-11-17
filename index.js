@@ -69,7 +69,6 @@ const createDropdownElement = (placeholder, options, idOrNameToBeSuppliedToInput
     selectComponent.name = idOrNameToBeSuppliedToInput;
     selectComponent.addEventListener("change", consoleValue);
     selectComponent.setAttribute("multiple", true);
-    selectComponent.multiSelect();
     
     // adding above created input field type component in the box
     if (parentComponent && dropdownBoxComponent && selectComponent) {
