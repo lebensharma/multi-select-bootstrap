@@ -4,3 +4,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const idOrNameToBeSuppliedToInput = "branches";
     DropdownMultiSelect(placeholder, jsonFilePath, idOrNameToBeSuppliedToInput);
 });
+
+const submitForm = (event) => {
+    event.preventDefault();
+    const multiSelect = event.target.elements.namedItem('branches');
+    var selected = [...multiSelect.options]
+        .filter((option) => option.selected)
+        .map((option) => option.value);
+    console.log(selected);
+}
