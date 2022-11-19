@@ -19,7 +19,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 	function resetParticle(particle, width, height) {
 		particle.color = colors[(Math.random() * colors.length) | 0];
 		particle.x = Math.random() * (width / 10);
-		particle.y = Math.random() * (height / 10) - (height / 10);
+		particle.y = Math.random() * (height / 100) - (height / 100);
 		particle.diameter = Math.random() * 10;
 		particle.tilt = Math.random() * 10 - 10;
 		particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
