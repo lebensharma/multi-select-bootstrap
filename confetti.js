@@ -17,6 +17,8 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 	var waveAngle = 0;
 	
 	function resetParticle(particle, width, height) {
+		let width = width / 10;
+		let height = height / 10;
 		particle.color = colors[(Math.random() * colors.length) | 0];
 		particle.x = Math.random() * width;
 		particle.y = Math.random() * height - height;
